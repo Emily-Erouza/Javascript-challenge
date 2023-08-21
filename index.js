@@ -1,21 +1,21 @@
 // leve 1
 function isPalindrome(str) {
-  // Remove non-alphanumeric Characters and convert characters from uppercase to lowercase
   const cleanedStr = str.replace(/[^a-z0-9]/gi, "").toLowerCase();
 
-  // check if the cleaned string is equal to its reverse
   return cleanedStr === cleanedStr.split("").reverse().join("");
 }
-console.log(isPalindrome("hello")); // false
+
+console.log(isPalindrome("racecar")); // true
+console.log(isPalindrome("level")); // true
+console.log(isPalindrome("hello"));//  false
+console.log(isPalindrome("A man, a plan, a canal, Panama"));//  true
 
 
 
 // level 2
 function isEnhancedPalindrome(str) {
-  // Remove non-alphanumeric Characters and convert to lowercase
   const cleanedStr = str.replace(/[^a-z0-9]/gi, "").toLowerCase();
 
-  // check if the cleaned string is equal to its reverse
   return cleanedStr === cleanedStr.split("").reverse().join("");
 }
 console.log(isEnhancedPalindrome("A man, a plan, a canal,Panama")); // true
